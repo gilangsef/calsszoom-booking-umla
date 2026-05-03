@@ -1,0 +1,3 @@
+import './bootstrap';
+
+lucide.createIcons();

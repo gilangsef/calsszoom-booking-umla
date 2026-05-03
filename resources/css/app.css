@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* @theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+} */
+
+@theme {
+    /* Font - Menggunakan Instrument Sans sesuai request baru */
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+
+    /* Jelz UI Core Colors (Simple Colors Concept) */
+    --color-primary: #2563EB;         /* Blue - Untuk Booking & Action */
+    --color-primary-hover: #1D4ED8;
+    --color-foreground: #0F172A;      /* Darker Blue/Slate for text */
+    --color-muted: #F8FAFC;           /* Base Light Gray/Blue */
+    --color-border: #E2E8F0;
+
+    /* Jelz UI Accent Colors */
+    --color-accent-blue: #3B82F6;
+    --color-accent-green: #22C55E;    /* Success/Active */
+    --color-accent-yellow: #EAB308;   /* Warning/Pending */
+    --color-accent-red: #EF4444;      /* Error/Canceled */
+
+    /* Custom Radius (Ciri khas Jelz UI) */
+    --radius-card: 20px;
+    --radius-button: 12px;
+    --radius-icon: 18px;
+
+    /* Shadow Custom */
+    --shadow-jelz: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Utilities untuk Table Jelz UI */
+@utility table-row-hover {
+    @apply border-b border-gray-50 hover:bg-blue-50/30 transition-colors;
+}
+
+@utility badge-base {
+    @apply text-xs font-medium px-2.5 py-1 rounded-full border;
+}
+
+[x-cloak] {
+    display: none !important;
+}
